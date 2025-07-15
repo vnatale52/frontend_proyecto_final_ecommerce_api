@@ -45,7 +45,7 @@ __ src/                      # Carpeta principal que contiene todo el código fue
 ¦  
 __ .env                              #  (Archivo local, no se sube al repositorio) Almacena las variables de entorno y secretos (PORT,                                                    JWT SECRET KEY y las correspondientes a Firebase).
 
-__ .gitignore                        #  Especifica qué archivos y carpetas ignorar en Git.
+__ .gitignore                        #  Especifica qué archivos y carpetas ignorar a en Git.
 __ package.json                      #  Manifiesto del proyecto: dependencias, scripts y metadatos.
 __ package-lock.json                 #  (Autogenerado) Registra las versiones exactas de las dependencias.
 __ README.md                         #  Documentación principal del proyecto.
