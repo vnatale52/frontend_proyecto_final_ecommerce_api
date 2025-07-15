@@ -1,6 +1,6 @@
 // js/api.js
 
-// Apunta a la URL de tu backend. ¡Cámbiala si desplegaste la API!
+// Apunta a la URL del backend. 
 const BASE_URL = 'https://backend-proyecto-final-ecommerce-api.onrender.com'; // URL de Render o 'http://localhost:3000'
 
 // --- Funciones de Autenticación ---

@@ -32,7 +32,7 @@ async function handleLogin(event) {
         ui.updateAuthUI(true, email);
     } catch (error) {
         console.error(error);
-        alert('Vincenzo dice: "Login fallido. Revisa tus credenciales".');
+        alert('Vincenzo te dice: "Login fallido. Revisa tus credenciales".');
     }
 }
 
