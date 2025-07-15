@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Productos</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Usamos type="module" para poder usar import/export en nuestros archivos JS -->
+    <script src="js/main.js" type="module" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Gestor de Productos de la Tienda</h1>
+        <div id="auth-section">
+            <!-- Formulario de Login (inicialmente visible) -->
+            <form id="login-form">
+                <input type="email" id="email" placeholder="Email (admin@tienda.com)" required>
+                <input type="password" id="password" placeholder="Contraseña (admin123)" required>
+                <button type="submit">Login</button>
+            </form>
+            <!-- Info del usuario (inicialmente oculto) -->
+            <div id="user-info" class="hidden">
+                <span id="user-email"></span>
+                <button id="logout-button">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="toolbar">
+            <h2>Catálogo de Productos</h2>
+            <!-- Este botón solo será funcional al estar logueado -->
+            <button id="create-product-button" class="hidden">Crear Nuevo Producto</button>
+        </div>
+        <div id="product-list-container">
+            <!-- Los productos se insertarán aquí dinámicamente -->
+        </div>
+    </main>
+
+    <!-- Modal para Crear/Editar Productos (inicialmente oculto) -->
+    <div id="product-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h3 id="modal-title">Crear Producto</h3>
+            <form id="product-form">
+                <!-- Un campo oculto para guardar el ID cuando estemos editando -->
+                <input type="hidden" id="product-id">
+                <input type="text" id="product-name" placeholder="Nombre del producto" required>
+                <input type="number" id="product-price" placeholder="Precio" step="0.01" required>
+                <input type="text" id="product-category" placeholder="Categorías (separadas por coma)">
+                <button type="submit">Guardar</button>
+                <button type="button" id="modal-close-button">Cerrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
